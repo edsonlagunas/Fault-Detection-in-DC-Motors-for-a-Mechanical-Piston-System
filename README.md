@@ -93,12 +93,12 @@ Instructions to run the simulation properly:
 - 1.3) On the solver selection, be sure to have the fixed-step type and the solver in discrete (no continous state)
 
 2.  **Go to the apps section**
-   
-   - 2.1) Click on the arrow to show more apps
-    - 2.2) Scroll down to the final and select "Run on hardware board"  *IMAGEN*
+
+- 2.1) Click on the arrow to show more apps
+- 2.2) Scroll down to the final and select "Run on hardware board"  *IMAGEN*
 
 
-3.  **Go to the hardware section:**
+4.  **Go to the hardware section:**
 
    - 3.1) On the left side should now appear the slection for a the hardware board
    - 3.2) Select the hardware board (on this case we used an arduino one)
