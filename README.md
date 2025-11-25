@@ -40,6 +40,10 @@ Before starting this project, make sure you have the following:
 * 3D Printer 
 
 * H-bridge (L298N)
+ 
+* Motor with an encoder (Pololoo 12 V DC Motor with encoder 30:1 gear ratio)
+  
+* Current sensor for arduino ( ACS 712 ) 
   
 
 
