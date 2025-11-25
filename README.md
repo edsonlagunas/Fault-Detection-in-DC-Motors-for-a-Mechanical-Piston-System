@@ -71,15 +71,11 @@ We present a complete framework, from path planning in a virtual map to high-pre
 
 **Project Objectives:**
 
-* Develop a virtual library environment using Matlab's `binaryOccupancyMap`.
-
-* Implement a Probabilistic Roadmap (PRM) algorithm for global, collision-free path planning.
-
-* Generate smooth, time-based trajectories using cubic polynomial interpolation.
-
-* Design a double-loop (cascade) control system in Simulink for precise trajectory tracking.
-
-* Validate the system's performance by comparing desired vs. actual simulated paths.
+- Develop health indicators for a DC motor using MATLAB/Simulink
+- Acquire motor signals to calculate RPM and current
+- Design the system and implement it in a real-world case
+- Create a notification system for each health indicator
+- Validate the project’s performance using scopes to obtain graphs of the system’s behavior
 
 
 
