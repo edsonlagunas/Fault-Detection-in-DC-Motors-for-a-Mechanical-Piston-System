@@ -14,7 +14,7 @@
 
 Before starting this project, make sure you have the following: 
 
-Knowledge 
+*Knowledge:*
 
 Basic understanding of DC motor operation with encoder  
 
@@ -30,7 +30,7 @@ Basic electrical/electronic hookups
 
  
 
-Hardware 
+*Hardware:* 
 
 A computer running Windows, Linux, or macOS that can support MATLAB/Simulink 
 
@@ -41,7 +41,7 @@ Arduino Uno
 H-bridge (L298N)
 
 
-Software 
+*Software:* 
 
 MATLAB (recommended version: R2023b or later) 
 
