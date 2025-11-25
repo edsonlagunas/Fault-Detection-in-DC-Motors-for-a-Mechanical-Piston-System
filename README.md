@@ -14,23 +14,23 @@
 
 Before starting this project, make sure you have the following: 
 
-*Knowledge:*
+**Knowledge:**
 
-Basic understanding of DC motor operation with encoder  
+* Basic understanding of DC motor operation with encoder  
 
-Familiarity with control theory, particularly PI controllers 
+* Familiarity with control theory, particularly PI controllers 
 
-Experience working within the MATLAB/Simulink environment 
+* Experience working within the MATLAB/Simulink environment 
 
-Basic experience with the usage of an Arduino Uno  
+* Basic experience with the usage of an Arduino Uno  
 
-CATIA – Basic 
+* CATIA – Basic 
 
-Basic electrical/electronic hookups 
+* Basic electrical/electronic hookups 
 
  
 
-*Hardware:* 
+**Hardware:** 
 
 A computer running Windows, Linux, or macOS that can support MATLAB/Simulink 
 
