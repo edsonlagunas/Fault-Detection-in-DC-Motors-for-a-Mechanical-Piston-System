@@ -264,18 +264,14 @@ As indicated in the MIT License, this software is provided **"as is", without wa
 
 ## 👥 Authors
 
-**PM**
-* **Marco Ferreri**
-* **Pietro Borracelli**
 
 **Project Team**
-* Hugo Valdés Ortega
-* José Francisco Reyes Maldonado
-* Emilio Rafael García García
-* Paul Pfister
-* Irving Alejandro Vásquez Salinas
-* Alejandro Alvarez Gil
+* José Eduardo Espinosa Marinero 
+* Santiago Gonzalez Faraco
+* Edson Antonio Lagunas Hurtado
 * Paul Leonardo Morales Grunauer 
+* Gabriel Alejandro Vizcarra Gutierrez
+
 
 ---
 
