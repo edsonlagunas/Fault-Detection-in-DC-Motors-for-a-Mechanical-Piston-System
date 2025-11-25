@@ -74,6 +74,7 @@ Our fault detection framework functions as a practical application of the Digita
 - Design the system and implement it in a real-world case
 - Create a notification system for each health indicator
 - Validate the project’s performance using scopes to obtain graphs of the system’s behavior
+- Be able to detect stall, overload and friction
 
 
 ---
@@ -102,7 +103,7 @@ Instructions to run the simulation:
 
 
 
-## 💻 Code Example / Programming
+## 💻 Codes and Programming
 
 The core of the navigation logic relies on the **Probabilistic Roadmap (PRM)** algorithm.
 
