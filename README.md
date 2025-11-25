@@ -185,49 +185,15 @@ end
 
 
 
-All project objectives were successfully met. We have designed and validated a complete autonomous navigation system for a library robot.
+All project objectives were successfully met. We have designed and validated a complete dc fault motor
 
 
 
-**Key Findings:**
-
-* The combination of **PRM planning** and a **double-loop PI/PI controller** provides a robust and highly accurate solution.
-
-* Simulation results show minimal tracking error for X, Y, and Theta variables.
-
-* This simulation serves as a validated "digital twin," significantly reducing the risk and cost of physical prototyping.
 
 
 ---
 
 
-## 🔜 Future Improvements
-
-
-* **Physical Prototype:** Construct a real-world robot based on the parameters validated in this simulation.
-
-* **Dynamic Obstacles:** Implement local path planning (e.g., VFH algorithm) to avoid moving people or objects in real-time.
-
-* **Sensor Integration:** Simulate LiDAR or Camera inputs for SLAM (Simultaneous Localization and Mapping) to replace the ideal map knowledge.
-
-
----
-
-
-
-
-## 📚 Additional Resources
-
-
-
-* [MathWorks: Mobile Robot Algorithms (Robotics System Toolbox)](https://www.mathworks.com/help/robotics/mobile-robot-algorithms.html)
-
-* [Probabilistic Roadmaps (Kavraki et al., 1996)](https://doi.org/10.1109/70.508439)
-
-* [Springer Handbook of Robotics](https://link.springer.com/book/10.1007/978-3-319-32552-1)
-
-
----
 
 
 
