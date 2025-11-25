@@ -211,6 +211,7 @@ The following block diagram represents the complete **Digital Twin** of the robo
     * Graphs compare the *Desired vs. Actual* velocities.
     * Plots display the cross-track error and trajectory tracking accuracy during the simulation.
 
+
 ## ✅ Conclusion
 
 
@@ -244,13 +245,6 @@ All project objectives were successfully met. We have designed and validated a c
 ---
 
 
-## ⚠️ Disclaimer
-
-
-As indicated in the MIT License, this software is provided **"as is", without warranty of any kind**. The authors are not responsible for any damage to hardware, loss of data, or other issues resulting from the use of this code.
-
-
----
 
 
 ## 📚 Additional Resources
@@ -282,14 +276,3 @@ As indicated in the MIT License, this software is provided **"as is", without wa
 ---
 
 
-## 📬 Contact
-
-
-This project is actively **maintained by Marco Ferreri and Pietro Borracelli**.
-
-If you require assistance with the simulation, have technical questions regarding the control architecture, or wish to propose improvements, please do not hesitate to reach out directly to the maintainer.
-
-* **Email:** marcoferreri.p@gmail.com
-* **Email:** pietro.borracelli@gmail.com
-
-For bug reports or specific feature requests, you are also encouraged to open a new **Issue** in this repository.
