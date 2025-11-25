@@ -28,6 +28,7 @@ Before starting this project, make sure you have the following:
 
 * Basic electrical/electronic hookups 
 
+
  
 
 **Hardware:** 
@@ -39,6 +40,7 @@ Before starting this project, make sure you have the following:
 * 3D Printer 
 
 * H-bridge (L298N)
+  
 
 
 **Software:** 
