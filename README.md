@@ -80,7 +80,7 @@ Our fault detection framework functions as a practical application of the Digita
 ---
 
 
-## 🛠️ Configuration & Usage
+## ⚙️ Configuration & Usage
 
 Instructions to run the simulation:
 
@@ -105,45 +105,60 @@ Instructions to run the simulation:
 
 ## 💻 Codes and Programming
 
-The core of the navigation logic relies on the **Probabilistic Roadmap (PRM)** algorithm.
+This code is the only code used. It needs to be inside of a Mathlab function block which helps us with the alerts by using the filtered RPM the error and the filteres obtained current.
 
-The following snippet demonstrates how the map is prepared and the planner is configured. First, the map is **inflated** by the robot's radius to create a safety margin (ensuring the physical robot doesn't scrape against obstacles). Then, the PRM is initialized with a high density of nodes to find a valid path through the library aisles.
+The function helps us to compare the inputs and send signals to the arduino output pins so we can conect our alarms. In this case we connected a series of red LEDS so they turned on when they detect the motor has friction, overload and stall.
 
-```matlab
-% --- 2. ROBOT PREPARATION & MAP INFLATION ---
-robotRadius = 1.0; % Robot radius for path planning (m)
-mapInflated = copy(libraryMap);
-inflate(mapInflated, robotRadius);
-
-% --- 3. PATH PLANNER (PRM) CONFIGURATION ---
-prm = mobileRobotPRM;
-prm.Map = mapInflated;
-prm.NumNodes = 2500;         % Number of random points scattered on the map
-prm.ConnectionDistance = 10; % Max distance to connect two nodes
-
-```
-
-
-The simulation environment is built upon a **Binary Occupancy Grid**, programmatically defined in MATLAB to ensure flexibility. Instead of using static maps, the layout is generated using parametric variables, allowing for rapid reconfiguration of the testing scenarios without manual redrawing.
-The following snippet demonstrates the initialization of the library map and the definition of obstacle properties:
+Connection in the simulink is as seen here: *imagen*
 
 ```matlab
-% --- 1. CREATE LIBRARY MAP ---
-% Large Map (80 rows x 120 columns)
-mapMatrix = zeros(80, 120);
+function [fault_overload, fault_friction, fault_stall] = ...
+         fault_detector(rpm, err, i)
 
-% Outer walls setup
-mapMatrix(1, :) = 1;    mapMatrix(end, :) = 1;
-mapMatrix(:, 1) = 1;    mapMatrix(:, end) = 1;
+% ----- Parámetro del filtro (equivalente a ~100 ms) -----
+alpha = 0.95;    
+% Mientras más alto = más “parecido a delay de 100 ms”
 
-% Shelf properties (Parametric Design)
-stackWidth = 1;         % Shelf width (m)
-stackLength = 60;       % Shelf length (m)
-stackTopY = 10;         % Y-position where shelves start
-aisleWidth = 10;        % Space for aisles
+% ----- Variables persistentes ULTRA pequeñas -----
+persistent rpm_d err_d i_d
 
-% 4 Shelves on the LEFT of the entrance
-stackColumn = aisleWidth + 1; % Start column (X=11)
+if isempty(rpm_d)
+    rpm_d = rpm;
+    err_d = err;
+    i_d   = i;
+end
+
+% ----- Filtro exponencial (simula retraso sin usar RAM) -----
+rpm_d = alpha * rpm_d + (1 - alpha) * rpm;
+err_d = alpha * err_d + (1 - alpha) * err;
+i_d   = alpha * i_d   + (1 - alpha) * i;
+
+% ----- Márgenes definidos como ±15% respecto al valor filtrado -----
+i_max   = i_d   * 1.15;
+err_max = err_d * 1.15;
+rpm_min = rpm_d * 0.85;
+
+% ----- Inicializar -----
+fault_overload = false;
+fault_friction = false;
+fault_stall    = false;
+
+% ----- Stall -----
+if (i > i_max) && (err > err_max) && (rpm < 10)
+    fault_stall = true;
+end
+
+% ----- Overload -----
+if (i > i_max) && (err > err_max) && (rpm < rpm_min)
+    fault_overload = true;
+end
+
+% ----- Friction -----
+if (rpm < rpm_min) && (i > 0.7*i_max) && ~(fault_stall || fault_overload)
+    fault_friction = true;
+end
+
+end
 ```
 ### 🛠️ Customization & Layout Modification
 
