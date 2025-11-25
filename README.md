@@ -18,7 +18,7 @@ Before starting this project, make sure you have the following:
 
 * Basic understanding of DC motor operation with encoder  
 
-* Familiarity with control theory, particularly PI controllers 
+* Familiarity with control theory, particularly PID controllers 
 
 * Experience working within the MATLAB/Simulink environment 
 
@@ -86,53 +86,37 @@ Our fault detection framework functions as a practical application of the Digita
 
 ## ⚙️ Configuration & Usage
 
-Instructions to run the simulation:
+Instructions to run the simulation properly:
 
-1.  **Open the Main Script:**
-    Open `main_run_simulation.m` in MATLAB.
+1.  **Open the Configuration parameters Ctrl + E**
+ 
+ 1.1) Go to solver 
+ 1.2) On the simulation time, be sure to have the start time at 0.0 and stop time as "inf" 
+ 1.3) On the solver selection, be sure to have the fixed-step type and the solver in discrete (no continous state)
 
-2.  **Run the Script:**
-    Click the **Run** button (or press F5).
+2.  **Go to the apps section**
+   
+    2.1) Click on the arrow to show more apps
+    2.2) Scroll down to the final and select "Run on hardware board"  *IMAGEN*
 
-    *Note:* You do **not** need to open the Simulink model manually. This master script automatically:
-    * Calls `defineSimscapeParameters.m` and `planLibraryPath.m` to initialize parameters and map.
-    * Executes `generateTrajectoryAndRunSim.m`.
-    * Opens and runs the Simulink model `diff_drive.slx`.
 
-3.  **Visualize:**
-    Once the script finishes, the simulation results and trajectory plots will be displayed automatically.
+3.  **Go to the hardware section:**
+
+    3.1) On the left side should now appear the slection for a the hardware board
+    3.2) Select the hardware board (on this case we used an arduino one)
+    3.3) Make sure again your stop time is set at infinite by just writing "inf"
+    3.4) Finally, to run or try the simulation it should always be played on the "Monitor & Tune" button 
 
 
 ---
 ## ⚙️ Simulink Control Architecture
 
-The following block diagram represents the complete **Digital Twin** of the robot, integrating high-level kinematic control with low-level motor dynamics and physical simulation.
 
-![Simulink Diagram](Results/Images/9.jpeg)
 
-### 🔍 System Breakdown
 
-* **↖️ Top-Left: Reference Generation**
-    The system inputs are derived from the **Path Planning** module. The `simulink_path_data` block provides the desired trajectory points ($x_{ref}, y_{ref}, \theta_{ref}$) which serve as the setpoints for the control loop.
 
-* **⬆️ Top-Center: High-Level Kinematic Control**
-    This is the "brain" of the robot.
-    * **Cinematic Controller:** Calculates the position error and computes the required linear ($v$) and angular ($\omega$) velocities for the robot body.
-    * **Inverse Kinematics:** Translates the robot's body velocities into individual wheel angular velocities ($\omega_L, \omega_R$).
 
-* **⬇️ Bottom-Center: Low-Level Motor Control**
-    This section implements the inner control loop.
-    * **PI Controllers:** Two discrete `PI(s)` controllers regulate the torque ($\tau$) sent to the motors by comparing the desired wheel speeds with the actual feedback from the Simscape model.
 
-* **↙️ Left & Bottom-Left: Simscape Multibody Plant**
-    This vertical section represents the physical modeling of the robot (**Digital Twin**).
-    * It includes the `World Frame`, `Solver Configuration`, and rigid body transforms that simulate the robot's chassis and wheels.
-    * **Sensors** in this block measure the **actual state** ($x_{act}, y_{act}, \theta_{act}$), closing the primary feedback loop.
-
-* **➡️ Right: Performance Monitoring**
-    The output section contains **Scopes** and workspace writers to visualize real-time performance.
-    * Graphs compare the *Desired vs. Actual* velocities.
-    * Plots display the cross-track error and trajectory tracking accuracy during the simulation.
 ---
 
 ## 💻 Codes and Programming
@@ -141,7 +125,7 @@ This code is the only code used. It needs to be inside of a Mathlab function blo
 
 The function helps us to compare the inputs and send signals to the arduino output pins so we can conect our alarms. In this case we connected a series of red LEDS so they turned on when they detect the motor has friction, overload and stall.
 
-Connection in the simulink is as seen here: *imagen*
+Connection in the simulink is as seen here: *IMAGEN*
 
 ```matlab
 function [fault_overload, fault_friction, fault_stall] = ...
