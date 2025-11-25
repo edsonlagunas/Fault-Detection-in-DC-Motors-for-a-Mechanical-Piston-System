@@ -76,27 +76,6 @@ Our fault detection framework functions as a practical application of the Digita
 - Validate the project’s performance using scopes to obtain graphs of the system’s behavior
 
 
-
----
-
-
-
-## 🔧 Simulation Environment
-
-
-
-**Description of the environment used:**
-
-
-
-* **Main Simulator:** MATLAB & Simulink
-
-* **Map Generation:** `binaryOccupancyMap` (inflated by robot radius)
-
-* **Path Planning Algorithm:** `mobileRobotPRM` (Probabilistic Roadmap)
-
-* **Control Architecture:** Simulink Block Diagram (Cascade Control)
-
 ---
 
 
