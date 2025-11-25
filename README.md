@@ -1,9 +1,7 @@
-# Simulink-Based Design and Control of an Autonomous Library Assistant Robot
+# Fault-Detection-in-DC-Motors-for-a-Mechanical-Piston-System Fault detect 
 
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white) ![Simulink](https://img.shields.io/badge/Simulink-orange?style=for-the-badge&logo=mathworks&logoColor=white)
-
-**Digital Twin simulation of an autonomous differential drive robot for library navigation. Features PRM path planning in MATLAB and double-loop PI control in Simulink.**
 
 
 ---
@@ -14,37 +12,44 @@
 
 
 
-To run this simulation, ensure you have the following environment:
+Before starting this project, make sure you have the following: 
+
+Knowledge 
+
+Basic understanding of DC motor operation with encoder  
+
+Familiarity with control theory, particularly PI controllers 
+
+Experience working within the MATLAB/Simulink environment 
+
+Basic experience with the usage of an Arduino Uno  
+
+CATIA – Basic 
+
+Basic electrical/electronic hookups 
+
+ 
+
+Hardware 
+
+A computer running Windows, Linux, or macOS that can support MATLAB/Simulink 
+
+Arduino Uno 
+
+3D Printer 
+
+H-bridge (L298N)
 
 
+Software 
 
-* **Knowledge:**
+MATLAB (recommended version: R2023b or later) 
 
-    * Fundamentals of Robotics (Differential Drive Kinematics)
+Simulink 
 
-    * Control Theory (PI Controllers)
+Essential toolboxes/Add On: 
 
-    * MATLAB/Simulink environment usage
-
-* **Hardware:**
-
-    * PC with Windows, Linux, or macOS capable of running MATLAB/Simulink.
-
-* **Software:**
-
-    * MATLAB (Recommended: R2023b or newer)
-
-    * Simulink
-
-    * **Required Toolboxes:**
-
-        * Robotics System Toolbox
-
-        * Navigation Toolbox
-
-        * Control System Toolbox
-
-
+Simulink support package for Arduino Hardware  
 
 ---
 
