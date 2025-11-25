@@ -53,9 +53,7 @@ Before starting this project, make sure you have the following:
 
 * Simulink 
 
-* Essential toolboxes/Add On: 
-
-* Simulink support package for Arduino Hardware  
+* Essential toolboxes/Add On: "Simulink support package for Arduino Hardware"  
 
 ---
 
@@ -78,7 +76,7 @@ Our fault detection framework functions as a practical application of the Digita
 - Design the system and implement it in a real-world case
 - Create a notification system for each health indicator
 - Validate the project’s performance using scopes to obtain graphs of the system’s behavior
-- Be able to detect stall, overload and friction
+- Be able to detect stall, overload and friction in real time
 
 
 ---
@@ -90,22 +88,22 @@ Instructions to run the simulation properly:
 
 1.  **Open the Configuration parameters Ctrl + E**
  
- 1.1) Go to solver 
- 1.2) On the simulation time, be sure to have the start time at 0.0 and stop time as "inf" 
- 1.3) On the solver selection, be sure to have the fixed-step type and the solver in discrete (no continous state)
+- 1.1) Go to solver 
+- 1.2) On the simulation time, be sure to have the start time at 0.0 and stop time as "inf" 
+- 1.3) On the solver selection, be sure to have the fixed-step type and the solver in discrete (no continous state)
 
 2.  **Go to the apps section**
    
-    2.1) Click on the arrow to show more apps
-    2.2) Scroll down to the final and select "Run on hardware board"  *IMAGEN*
+   - 2.1) Click on the arrow to show more apps
+    - 2.2) Scroll down to the final and select "Run on hardware board"  *IMAGEN*
 
 
 3.  **Go to the hardware section:**
 
-    3.1) On the left side should now appear the slection for a the hardware board
-    3.2) Select the hardware board (on this case we used an arduino one)
-    3.3) Make sure again your stop time is set at infinite by just writing "inf"
-    3.4) Finally, to run or try the simulation it should always be played on the "Monitor & Tune" button 
+   - 3.1) On the left side should now appear the slection for a the hardware board
+   - 3.2) Select the hardware board (on this case we used an arduino one)
+   - 3.3) Make sure again your stop time is set at infinite by just writing "inf"
+   - 3.4) Finally, to run or try the simulation it should always be played on the "Monitor & Tune" button 
 
 
 ---
