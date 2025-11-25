@@ -32,24 +32,24 @@ Before starting this project, make sure you have the following:
 
 **Hardware:** 
 
-A computer running Windows, Linux, or macOS that can support MATLAB/Simulink 
+* A computer running Windows, Linux, or macOS that can support MATLAB/Simulink 
 
-Arduino Uno 
+* Arduino Uno 
 
-3D Printer 
+* 3D Printer 
 
-H-bridge (L298N)
+* H-bridge (L298N)
 
 
-*Software:* 
+**Software:** 
 
-MATLAB (recommended version: R2023b or later) 
+* MATLAB (recommended version: R2023b or later) 
 
-Simulink 
+* Simulink 
 
-Essential toolboxes/Add On: 
+* Essential toolboxes/Add On: 
 
-Simulink support package for Arduino Hardware  
+* Simulink support package for Arduino Hardware  
 
 ---
 
