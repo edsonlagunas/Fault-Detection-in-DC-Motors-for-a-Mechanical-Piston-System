@@ -61,11 +61,9 @@ Before starting this project, make sure you have the following:
 
 
 
-Large libraries face operational challenges in guiding users and managing book logistics. Autonomous robots offer a solution to improve efficiency. This project addresses the need for a robust navigation system, proposing a design validated entirely through simulation.
-
-
-
-We present a complete framework, from path planning in a virtual map to high-precision motor control, demonstrating a viable proof-of-concept ("Digital Twin") for a library assistant robot.
+In a piston assembly line, if one of the pistons begins to exhibit any type of malfunction, this project enables real-time fault detection. Such capability contributes directly to the preventive maintenance of the system.
+We present here the complete program for fault detection. Specifically, this project provides a comprehensive simulation of fault detection in a DC motor, which serves as the foundation of our digital twin. The digital twin is structured around metrics that allow the identification of deviations, the detection of faults, and the anticipation of potential issues.
+Our fault detection framework functions as a practical application of the Digital Twin concept, since it integrates data from the physical system to assess its condition and predict failures through the digital model developed in Simulink.
 
 
 
