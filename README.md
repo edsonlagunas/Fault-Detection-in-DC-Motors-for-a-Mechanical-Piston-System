@@ -108,7 +108,45 @@ Instructions to run the simulation properly:
 
 ---
 ## ⚙️ Simulink Control Architecture
+In Simulink, these block diagrams were needed to get everything worked correctly. We are going to explain each one of them. 
 
+ “ENCODER TO FILTER RPM”:  
+
+LINK TO THE FOLDER IMAGE OF THAT 
+
+With this block sequence we convert the pulses from the encoder into RPM’s 
+
+“LOW FILTER PASS” 
+
+LINK TO THAT IMAGE  
+
+You will get the RPM’s with some noise, so we implemented a Low filter pass to get a cleaner view of the RPM signal, this will be very helpful, for you too. 
+
+SUBSYTEM COMPARING THE TARGET WITH THE FILTERED RPMs 
+
+FOTO DEL SUBSITEMA  
+
+You will need to set the values of the RPM’s you want so in order to do that in the Target variable, now inside of the Subsystem, what we did is that the Target variable is compared to the filtered RPM’s.  Here the subsystem uses the error to generate the P, I, D control signals within a plus/minus 8 bit range. 
+
+PID DENTRO SUBSISTEMA FOTO  
+
+FOTO DEL SIGNAL PROCESSING TO OUTPUT  
+
+Then it adds the P, I, D signals to obtain the PWM signal also within a plus/minus 8 bit range. 
+
+FOTO PWM SIGNAL  
+
+Then the PWM signal is processed  
+
+FOTO DEL CURRENT SENSOR 
+
+Here is the part where you can process the analog input of the Arduino that is connected to the ASC Current Sensor. It transforms the analog input into the actual value of the current based on the relationship of voltage to bits (5/1023), the voltage offset (2.515), and the volts/amperes resolution (0.66). It uses a Low Pass Filter to smooth out the inputs like we did in the RPM case. 
+
+FOTO DLE BLOQUE FINAL  
+
+PARTE DEL CODIGO (COMO VEAN) 
+
+Then finally, our main purpose and the heart of this project is to get the Faults in real time, so wrote a code capable of detect the faults (Overload, Friction and Stall) in real time, we put our values (Filtered RPM’s, Error and Filtered Current) and our Digital Outputs can be seen connecting some LED’s to the pins you declared in the blocks (later this repository we will explain about the physical connections). 
 
 
 
