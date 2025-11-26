@@ -1,0 +1,47 @@
+function [fault_overload, fault_friction, fault_stall] = ...
+         fault_detector(rpm, err, i)
+
+% ----- Parámetro del filtro (equivalente a ~100 ms) -----
+alpha = 0.95;    
+% Mientras más alto = más “parecido a delay de 100 ms”
+
+% ----- Variables persistentes ULTRA pequeñas -----
+persistent rpm_d err_d i_d
+
+if isempty(rpm_d)
+    rpm_d = rpm;
+    err_d = err;
+    i_d   = i;
+end
+
+% ----- Filtro exponencial (simula retraso sin usar RAM) -----
+rpm_d = alpha * rpm_d + (1 - alpha) * rpm;
+err_d = alpha * err_d + (1 - alpha) * err;
+i_d   = alpha * i_d   + (1 - alpha) * i;
+
+% ----- Márgenes definidos como ±15% respecto al valor filtrado -----
+i_max   = i_d   * 1.15;
+err_max = err_d * 1.15;
+rpm_min = rpm_d * 0.85;
+
+% ----- Inicializar -----
+fault_overload = false;
+fault_friction = false;
+fault_stall    = false;
+
+% ----- Stall -----
+if (i > i_max) && (err > err_max) && (rpm < 10)
+    fault_stall = true;
+end
+
+% ----- Overload -----
+if (i > i_max) && (err > err_max) && (rpm < rpm_min)
+    fault_overload = true;
+end
+
+% ----- Friction -----
+if (rpm < rpm_min) && (i > 0.7*i_max) && ~(fault_stall || fault_overload)
+    fault_friction = true;
+end
+
+end
