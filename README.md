@@ -110,13 +110,13 @@ Instructions to run the simulation properly:
 ## ⚙️ Simulink Control Architecture
 In Simulink, these block diagrams were needed to get everything worked correctly. We are going to explain each one of them. 
 
- “ENCODER TO FILTER RPM”:  
+### _ENCODER TO FILTER RPM_  
 
 LINK TO THE FOLDER IMAGE OF THAT 
 
 With this block sequence we convert the pulses from the encoder into RPM’s 
 
-“LOW FILTER PASS” 
+### _LOW FILTER PASS_ 
 
 LINK TO THAT IMAGE  
 
@@ -138,9 +138,8 @@ FOTO PWM SIGNAL
 
 Then the PWM signal is processed  
 
-![Current Sensor](SIMULINK_ARCHITECTURE/Current_Detection.jpg)
 
-
+<img src="SIMULINK_ARCHITECTURE/Current_Detection.jpg" width="300" height="200">
 
 Here is the part where you can process the analog input of the Arduino that is connected to the ASC Current Sensor. It transforms the analog input into the actual value of the current based on the relationship of voltage to bits (5/1023), the voltage offset (2.515), and the volts/amperes resolution (0.66). It uses a Low Pass Filter to smooth out the inputs like we did in the RPM case. 
 
