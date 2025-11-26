@@ -116,15 +116,15 @@ LINK TO THE FOLDER IMAGE OF THAT
 
 With this block sequence we convert the pulses from the encoder into RPM’s 
 
-### _LOW FILTER PASS_ 
+### _LOW PASS FILTER_ 
 
-LINK TO THAT IMAGE  
+<img src="SIMULINK_ARCHITECTURE/LOW_PASS_FILTER.png" width="500" height="300">  
 
 You will get the RPM’s with some noise, so we implemented a Low filter pass to get a cleaner view of the RPM signal, this will be very helpful, for you too. 
 
-SUBSYTEM COMPARING THE TARGET WITH THE FILTERED RPMs 
+### _SUBSYTEM COMPARING THE TARGET WITH THE FILTERED RPM's_ 
 
-FOTO DEL SUBSITEMA  
+<img src="SIMULINK_ARCHITECTURE/SUBSYSTEM.png" width="500" height="300">
 
 You will need to set the values of the RPM’s you want so in order to do that in the Target variable, now inside of the Subsystem, what we did is that the Target variable is compared to the filtered RPM’s.  Here the subsystem uses the error to generate the P, I, D control signals within a plus/minus 8 bit range. 
 
@@ -139,7 +139,7 @@ FOTO PWM SIGNAL
 Then the PWM signal is processed  
 
 
-<img src="SIMULINK_ARCHITECTURE/Current_Detection.jpg" width="300" height="200">
+<img src="SIMULINK_ARCHITECTURE/Current_Detection.jpg" width="500" height="300">
 
 Here is the part where you can process the analog input of the Arduino that is connected to the ASC Current Sensor. It transforms the analog input into the actual value of the current based on the relationship of voltage to bits (5/1023), the voltage offset (2.515), and the volts/amperes resolution (0.66). It uses a Low Pass Filter to smooth out the inputs like we did in the RPM case. 
 
