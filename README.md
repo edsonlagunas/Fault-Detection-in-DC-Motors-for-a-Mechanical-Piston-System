@@ -154,7 +154,7 @@ Here is the part where you can process the analog input of the Arduino that is c
 
 PARTE DEL CODIGO (COMO VEAN) 
 
-[Code for the fault detector in real time](URL-de-la-carpeta-copiada)
+[Code for the fault detector in real time](SIMULINK_ARCHITECTURE/FaultDetectionBlockCode.txt)
 
 Then finally, our main purpose and the heart of this project is to get the Faults in real time, so we wrote a code capable of detect the faults (Overload, Friction and Stall) in real time, we put our values (Filtered RPM’s, Error and Filtered Current) and our Digital Outputs can be seen connecting some LED’s to the pins you declared in the blocks (later this repository we will explain about the physical connections). 
 
