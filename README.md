@@ -138,7 +138,8 @@ FOTO PWM SIGNAL
 
 Then the PWM signal is processed  
 
-FOTO DEL CURRENT SENSOR 
+![Current Sensor](SIMULINK ARCHITECTURE/Current Detection.jpg)
+
 
 Here is the part where you can process the analog input of the Arduino that is connected to the ASC Current Sensor. It transforms the analog input into the actual value of the current based on the relationship of voltage to bits (5/1023), the voltage offset (2.515), and the volts/amperes resolution (0.66). It uses a Low Pass Filter to smooth out the inputs like we did in the RPM case. 
 
