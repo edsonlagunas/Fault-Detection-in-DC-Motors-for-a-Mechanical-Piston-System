@@ -247,6 +247,22 @@ Below is the link that takes you to the folder of the Code:
 
 
 
+## 🔜 Future Improvements
+
+
+* *Physical Prototype:* Construct a real-world robot based on the parameters validated in this simulation.
+
+* *Dynamic Obstacles:* Implement local path planning (e.g., VFH algorithm) to avoid moving people or objects in real-time.
+
+* *Sensor Integration:* Simulate LiDAR or Camera inputs for SLAM (Simultaneous Localization and Mapping) to replace the ideal map knowledge.
+
+
+---
+
+
+
+
+
 ## ✅ Conclusion
 
 
