@@ -94,7 +94,7 @@ Instructions to run the simulation properly:
 2.  **Go to the apps section**
 
 - 2.1) Click on the arrow to show more apps
-- 2.2) Scroll down to the final and select "Run on hardware board"  *IMAGEN*
+- 2.2) Scroll down to the final and select "Run on hardware board"  
 
 
 4.  **Go to the hardware section:**
