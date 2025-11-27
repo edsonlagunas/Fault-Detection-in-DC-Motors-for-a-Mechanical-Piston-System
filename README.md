@@ -264,11 +264,11 @@ All project objectives were successfully met. We have designed and validated a c
 
 
 **Project Team**
-* José Eduardo Espinosa Marinero 
-* Santiago Gonzalez Faraco
-* Edson Antonio Lagunas Hurtado
-* Paul Leonardo Morales Grunauer 
-* Gabriel Alejandro Vizcarra Gutierrez
+* José Eduardo Espinosa Marinero jose.espinosamo@udlap.mx
+* Santiago Gonzalez Faraco santiago.gonzalezfo@udlap.mx
+* Edson Antonio Lagunas Hurtado edson.lagunasho@udlap.mx
+* Paul Leonardo Morales Grunauer paul.moralesgr@udlap.mx
+* Gabriel Alejandro Vizcarra Gutierrez gabriel.vizcarragz@udlap.mx
 
 
 ---
