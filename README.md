@@ -122,6 +122,7 @@ Instructions to run the simulation properly:
 *	ACS712 (IP-) → input voltaje L298N
 <img src="PHYSICAL_CONNECTIONS/SIMULATION_IMAGE.jpg" width="700" height="650">  
 ---
+
 ## ⚙️ Simulink Control Architecture
 In Simulink, these block diagrams were needed to get everything worked correctly. We are going to explain each one of them. 
 
@@ -184,7 +185,7 @@ This code is the only code used. It needs to be inside of a Mathlab function blo
 
 The function helps us to compare the inputs and send signals to the arduino output pins so we can conect our alarms. In this case we connected a series of red LEDS so they turned on when they detect the motor has friction, overload and stall.
 
-Connection in the simulink is as seen here: *IMAGEN*
+
 
 ```matlab
 function [fault_overload, fault_friction, fault_stall] = ...
