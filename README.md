@@ -79,23 +79,6 @@ Our fault detection framework functions as a practical application of the Digita
 - Be able to detect stall, overload and friction in real time
 
 
-⚡ Electronic Connections
-
-•	Pin 2 -> Encoder (Yellow wire)
-•	Pin 3-> Encoder (White wire)
-•	Pin 4 -> L298N In1 
-•	Pin 5 -> L298N In2 
-•	Pin 6 -> L298N Enable PWM 
-•	Analog Pin 0 -> Current Sensor ACS712 (Analog voltage output)
-•	L298N Out1 -> Encoder (red wire) 
-•	L298N Out2 -> Encoder (black wire) 
-•	Gnd dc -> Gnd l298N
-•	Gnd dc-> Encoder (green wire)
-•	5v dc -> Encoder (white wire)
-•	GND-> ACS712 Gnd Pin 
-•	5Vdc -> ACS712 Vcc Pin
-•	12Vdc -> ACS712 (IP+)
-•	ACS712 (IP-) -> input voltaje L298N
 
 
 ## ⚙️ Configuration & Usage
@@ -121,23 +104,22 @@ Instructions to run the simulation properly:
    - 3.3) Make sure again your stop time is set at infinite by just writing "inf"
    - 3.4) Finally, to run or try the simulation it should always be played on the "Monitor & Tune" button 
 
-⚡ Electronic Connections
-
-•	Pin 2 -> Encoder (Yellow wire)
-•	Pin 3-> Encoder (White wire)
-•	Pin 4 -> L298N In1 
-•	Pin 5 -> L298N In2 
-•	Pin 6 -> L298N Enable PWM 
-•	Analog Pin 0 -> Current Sensor ACS712 (Analog voltage output)
-•	L298N Out1 -> Encoder (red wire) 
-•	L298N Out2 -> Encoder (black wire) 
-•	Gnd dc -> Gnd l298N
-•	Gnd dc-> Encoder (green wire)
-•	5v dc -> Encoder (white wire)
-•	GND-> ACS712 Gnd Pin 
-•	5Vdc -> ACS712 Vcc Pin
-•	12Vdc -> ACS712 (IP+)
-•	ACS712 (IP-) -> input voltaje L298N
+⚡ **Electronic Connections**
+*	Pin 2 → Encoder (Yellow wire)
+*	Pin 3 → Encoder (White wire)
+*	Pin 4 → L298N In1 
+*	Pin 5 → L298N In2 
+*	Pin 6 → L298N Enable PWM 
+*	Analog Pin → Current Sensor ACS712 (Analog voltage output)
+*	L298N Out1 → Encoder (red wire) 
+*	L298N Out2 → Encoder (black wire) 
+*	Gnd dc → Gnd l298N
+*	Gnd dc → Encoder (green wire)
+*	5v dc → Encoder (white wire)
+*	GND → ACS712 Gnd Pin 
+*	5Vdc → ACS712 Vcc Pin
+*	12Vdc → ACS712 (IP+)
+*	ACS712 (IP-) → input voltaje L298N
 
 ---
 ## ⚙️ Simulink Control Architecture
