@@ -251,7 +251,7 @@ Below is the link that takes you to the folder of the Code:
 
 
 
-All project objectives were successfully met. We have designed and validated a complete dc fault motor
+The proyect was able to detect different faults in the DC motor, turning on its respective LEDs depending on the nature of the fault induced during tests. The main limiting factor we encountered during the implementation was the memory of the Arduino UNO board; the reduced memory drived the design of our fault detection program towards simplicity. The fault flags were booleans that turned on for an instant before turning off again and we were not able to implement persistence or emergency stop mechanisms. Nonetheless the objectives of the project were achieved, detecting the faults in the DC motor system in real time and activating visual cues accordinglly.
 
 
 
