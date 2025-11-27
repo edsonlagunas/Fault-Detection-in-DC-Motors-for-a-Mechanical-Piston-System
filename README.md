@@ -120,7 +120,7 @@ Instructions to run the simulation properly:
 *	5Vdc → ACS712 Vcc Pin
 *	12Vdc → ACS712 (IP+)
 *	ACS712 (IP-) → input voltaje L298N
-<img src="PHYSICAL_CONNECTIONS/SIMULATION_IMAGE.jpg" width="500" height="350">  
+<img src="PHYSICAL_CONNECTIONS/SIMULATION_IMAGE.jpg" width="700" height="650">  
 ---
 ## ⚙️ Simulink Control Architecture
 In Simulink, these block diagrams were needed to get everything worked correctly. We are going to explain each one of them. 
@@ -167,11 +167,9 @@ Here is the part where you can process the analog input of the Arduino that is c
 
 <img src="SIMULINK_ARCHITECTURE/FAULT_DETECTORS.jpg" width="500" height="350"> 
 
-PARTE DEL CODIGO (COMO VEAN) 
+In the next section we will explain the code that we put in the Fault Detectors Block.
 
-[Code for the fault detector in real time](SIMULINK_ARCHITECTURE/FaultDetectionBlockCode.txt)
 
-Then finally, our main purpose and the heart of this project is to get the Faults in real time, so we wrote a code capable of detect the faults (Overload, Friction and Stall) in real time, we put our values (Filtered RPM’s, Error and Filtered Current) and our Digital Outputs can be seen connecting some LED’s to the pins you declared in the blocks (later this repository we will explain about the physical connections). 
 
 
 
@@ -238,6 +236,10 @@ end
 end
 ```
 
+Our main purpose and the heart of this project is to get the Faults in real time, so we wrote a code capable of detecting the faults (Overload, Friction and Stall) in real time, we put our values (Filtered RPM’s, Error and Filtered Current) and our Digital Outputs can be seen connecting some LED’s to the pins you declared in the blocks (as explained in the _Electronic Connections_ section). 
+
+Below is the link that takes you to the folder of the Code:
+[Code for the fault detector in real time](SIMULINK_ARCHITECTURE/FaultDetectionBlockCode.txt)
 
 
 ---
