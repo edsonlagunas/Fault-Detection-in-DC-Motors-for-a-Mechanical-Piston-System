@@ -49,7 +49,7 @@ Before starting this project, make sure you have the following:
 
 **Software:** 
 
-* MATLAB (recommended version: R2023b or later) 
+* MATLAB (recommended version: R2025b or later) 
 
 * Simulink 
 
