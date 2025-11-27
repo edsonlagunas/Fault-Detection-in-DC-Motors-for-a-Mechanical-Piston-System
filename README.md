@@ -121,7 +121,7 @@ Instructions to run the simulation properly:
 *	12Vdc → ACS712 (IP+)
 *	ACS712 (IP-) → input voltaje L298N
 <img src="PHYSICAL_CONNECTIONS/SIMULATION_IMAGE.jpg" width="700" height="650">  
----
+
 
 ## ⚙️ Simulink Control Architecture
 In Simulink, these block diagrams were needed to get everything worked correctly. We are going to explain each one of them. 
