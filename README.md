@@ -248,11 +248,11 @@ Below is the link that takes you to the folder of the Code:
 
 
 ## 🔜 Future Improvements
-* *Implement a fault logging system:* a system that can be able to store timestamp, fault type, motor conditions, and estimated location of the malfunction. This data could be saved to an SD card, local memory, or sent wirelessly to a monitoring dashboard, enabling long-term analysis and maintenance tracking.
+* **Implement a fault logging system:** a system that can be able to store timestamp, fault type, motor conditions, and estimated location of the malfunction. This data could be saved to an SD card, local memory, or sent wirelessly to a monitoring dashboard, enabling long-term analysis and maintenance tracking.
 
-* *Persistence and safety mechanisms:* Adding a system such as latching fault states and triggering an emergency stop or reduced-power mode. This prevents the system from continuing operation after a severe fault is detected and compensates for the Arduino UNO’s limited RAM.
+* **Persistence and safety mechanisms:** Adding a system such as latching fault states and triggering an emergency stop or reduced-power mode. This prevents the system from continuing operation after a severe fault is detected and compensates for the Arduino UNO’s limited RAM.
 
-* *Migrate the implementation to a more powerful microcontroller: * By migrating to an arduino mega, ESP32, raspberry PI, etc. would allow higher sampling rates, more advanced filtering methods, and the possibility of running multiple diagnostic algorithms simultaneously.
+* **Migrate the implementation to a more powerful microcontroller:** By migrating to an arduino mega, ESP32, raspberry PI, etc. would allow higher sampling rates, more advanced filtering methods, and the possibility of running multiple diagnostic algorithms simultaneously.
 
 
 ---
